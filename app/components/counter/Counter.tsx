@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 
 import {
@@ -9,7 +8,7 @@ import {
   incrementByAmount,
   incrementIfOdd,
   selectCount,
-  selectStatus,
+  selectStatus
 } from "@/lib/features/counter/counterSlice";
 
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
@@ -23,59 +22,5 @@ export const Counter = () => {
 
   const incrementValue = Number(incrementAmount) || 0;
 
-  return (
-    <div>
-      <div className={styles.row}>
-        <button
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          -
-        </button>
-        <span aria-label="Count" className={styles.value}>
-          {count}
-        </span>
-        <button
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          +
-        </button>
-      </div>
-      <div className={styles.row}>
-        <input
-          className={styles.textbox}
-          aria-label="Set increment amount"
-          value={incrementAmount}
-          type="number"
-          onChange={(e) => {
-            setIncrementAmount(e.target.value);
-          }}
-        />
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
-        >
-          Add Amount
-        </button>
-        <button
-          className={styles.asyncButton}
-          disabled={status !== "idle"}
-          onClick={() => dispatch(incrementAsync(incrementValue))}
-        >
-          Add Async
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => {
-            dispatch(incrementIfOdd(incrementValue));
-          }}
-        >
-          Add If Odd
-        </button>
-      </div>
-    </div>
-  );
+  return <>Helo World</>;
 };
