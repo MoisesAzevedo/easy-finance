@@ -13,10 +13,12 @@
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
-  border: solid 4px #aff4c6;
-  border-radius: 12px;
   padding: 15px;
+
+  border: solid 1px #38862d;
+  border-radius: 12px;
   width: calc(100% - 396px - 30px);
 }

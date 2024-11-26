@@ -25,12 +25,12 @@ const DropDownMenuComponent = () => {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="bg-green-200 border-green-200 hover:bg-green-300 rounded-full w-9 h-9 p-0 "
+          className="bg-none  hover:opacity-[0.8] rounded-full w-9 h-9 p-0 "
         >
-          <img src="/icons/user.png" style={{ height: "20px" }} />
+          <img src="/icons/user.png" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-56 z-50">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>

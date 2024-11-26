@@ -22,5 +22,5 @@ export const Counter = () => {
 
   const incrementValue = Number(incrementAmount) || 0;
 
-  return <>Helo World</>;
+  return <>HRélou sjow</>;
 };

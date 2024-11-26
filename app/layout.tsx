@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
-import { Header } from "./components/layout/Header";
+import Header from "./components/layout/Header";
 
 import "./styles/globals.css";
 import styles from "./styles/layout.module.css";

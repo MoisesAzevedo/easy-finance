@@ -6,8 +6,9 @@ import { usePathname } from "next/navigation";
 import styles from "./layout.module.scss";
 import { Button } from "@/components/ui/button";
 import DropDownMenuComponent from "@/components/ui/DropDownMenuComponent";
+import ButtonCustom from "@/components/ui/ButtonCustom";
 
-export const Header = () => {
+const Header = () => {
   const pathname = usePathname();
 
   return (
@@ -15,13 +16,28 @@ export const Header = () => {
       {" "}
       <nav>
         <img className={styles.logo} src="/icons/Easy Finance.png" />
-        <div>
-          <Button
-            variant="outline"
-            className="bg-green-200 border-green-200 hover:bg-green-300 "
-          >
-            Logout
-          </Button>
+
+        <div className={styles.interaction}>
+          <div className="flex items-center     ">
+            <img
+              src="/icons/search.png"
+              className="w[24px] h-[24px] ml-1 absolute ml-0"
+            />
+            <input
+              placeholder="Pesquisar"
+              className="w-[180px] h-[36px] p-2 pl-[34px] border border-solid border-[#1F4D18]  rounded-[4px] "
+            />
+          </div>
+
+          <ButtonCustom
+            value={
+              <div className="gap-[5px] flex">
+                <p>2021</p>
+                <img src="/icons/DropDown.png" className="w-[15px]" />
+              </div>
+            }
+            className="bg-[#A9E2BD]   hover:bg-green-300 w-[90px] h-[36px]"
+          />
 
           <DropDownMenuComponent />
         </div>
@@ -29,3 +45,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
