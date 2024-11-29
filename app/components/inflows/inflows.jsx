@@ -95,7 +95,7 @@ const Inflows = () => {
       <header>
         <div>
           <h1>Entradas</h1>
-          <p>Atualizado em: {updated}</p>
+          <p>Ultima data: {updated}</p>
         </div>
 
         <div className={styles.total}>
@@ -120,6 +120,9 @@ const Inflows = () => {
               return (
                 <tr>
                   <td>
+                    <div className={styles.v_dots}>
+                      <img src="icons/v_dots.png" />
+                    </div>
                     <input
                       type="text"
                       value={item.title}
@@ -166,7 +169,7 @@ const Inflows = () => {
               );
             })}
 
-            <tr>
+            <tr className={styles.add_line}>
               <td>
                 <input type="text" ref={inputTitleRef} onBlur={newObject} />
               </td>
@@ -202,10 +205,15 @@ const Inflows = () => {
             </tr>
           </tbody>
         </table>
+
+        <div className={styles.add_statement}>
+          <div>
+            <img src="/icons/doc.png" alt="" />
+          </div>
+        </div>
       </form>
 
       <div className={styles.submit}>
-        <ButtonCustom value="Adicionar Extrato" />
         <ButtonCustom
           /*   type="submit" */
           value="Salvar Alterações"

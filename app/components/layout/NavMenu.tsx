@@ -28,6 +28,10 @@ const NavMenu = () => {
           <img src="/icons/Investimentos.png" />
           <p>Investimentos</p>
         </Button>
+        <Button variant="outline" className={styles.button}>
+          <img src="/icons/Dividas.png" />
+          <p>Dividas</p>
+        </Button>
 
         <section className={styles.projects}>
           {projects.map((e, index) => {
