@@ -1,4 +1,6 @@
 .body {
+  background-color: #fbfbfb;
+  background-image: linear-gradient(180deg, #f8f8f8 0%, #dbf8e5 100%);
 }
 
 .section {
@@ -13,10 +15,12 @@
 }
 
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
-  border: solid 4px #aff4c6;
+  padding: 35px;
+
+  border: solid 1px #38862d;
   border-radius: 12px;
-  padding: 15px;
   width: calc(100% - 396px - 30px);
 }
