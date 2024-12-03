@@ -24,7 +24,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/ui/ButtonCustom.jsx"
+    "components/ui/ButtonCustom.jsx",
+    "pages/InflowsPage.jsx",
+    "app/pages/login/layout.jsx"
   ],
   "exclude": ["node_modules"]
 }

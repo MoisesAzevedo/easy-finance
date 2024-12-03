@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Inflows from "./components/inflows/inflows";
+import Inflows from "./pages/inflows/inflows";
 
 export default function IndexPage() {
   return <Inflows />;
