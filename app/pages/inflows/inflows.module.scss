@@ -1,3 +1,5 @@
+@import "../../styles/media-queries.scss";
+
 .section {
   position: relative;
 
@@ -91,7 +93,6 @@
           grid-auto-flow: column;
           justify-items: center;
           align-items: center;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
 
           th {
             font-size: 24px;
