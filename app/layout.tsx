@@ -44,10 +44,12 @@ import type { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
 import Header from "./pages/layout/Header";
 
+
 import "./styles/globals.css";
 import styles from "./styles/layout.module.css";
 import { Inter } from "next/font/google";
 import NavMenu from "./pages/layout/NavMenu";
+import LoginPage from "./pages/login/page";
 
 const mainFontFamily = Inter({
   weight: ["400", "600", "900"],
@@ -67,6 +69,14 @@ export default function Layout({ children }: Props) {
     return <>{children}</>; // Renderiza apenas o conteúdo da página
   }
 
+  if(pathname === "/login") {
+    return (
+    <html>
+    <LoginPage />
+    </html>
+    )
+  }
+
   return (
     <html lang="en" className={mainFontFamily.variable}>
       <body className={styles.body}>
@@ -74,6 +84,7 @@ export default function Layout({ children }: Props) {
         <section className={styles.section}>
           <NavMenu />
           <main className={styles.main}>{children}</main>
+          
         </section>
       </body>
     </html>
