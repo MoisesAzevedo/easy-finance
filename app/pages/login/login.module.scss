@@ -1,24 +1,262 @@
 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
   background-color: #EAEEED;
 }
 
 .logo {
-  width: 598px;
-  padding-left: 10rem;
+  max-width: 598px;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .wallpaper {
-  width: 55%;
-  object-fit: cover;
-  margin-left: 1.5rem;
+  width: 100%;
+  margin-left: 2%;
   border: #1E2D34 0.2rem solid;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
 }
 
 .form {
-  width: 20rem;
-  background-color: red;
-  position: relative;
-  margin-left: 50%;
-  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+.textmain {
+  color: #38862D;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.label {
+  color: #1F4D18 ;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 5% 0 2% 0;
+}
+
+.input {
+  width: 500px;
+  height: 40px;
+  padding-bottom: 5%;
+  border: #38862D 1px solid;
+  border-radius: 2px;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.forget {
+  width: 50%;
+  color: #1F4D18;
+  font-size: 70%;
+  font-weight: 500;
+  margin-left: 60%;
+  cursor: pointer;
+}
+
+.networks {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 8rem;
+  padding-top: 50%;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+.btnlogin {
+  width: 100%;
+  height: 40px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #AFF4C6;
+  color: #1F4D18;
+  border-radius: 2px;
+}
+
+.btnlogin:hover {
+  background-color: #AFF4C6;
+}
+
+.btngoogle {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #2E3748;
+
+}
+
+.btngoogle:hover {
+  background-color: #2E3748;
+}
+
+.baseboard {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.createacc {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+// Layout smaller screens // 
+
+@media (max-width: 2590px) {
+  .input {
+    width: 100%;
+  }
+
+  .forget {
+    margin-left: 80%;
+  }
+
+  .networks {
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 1920px) {
+  .forget {
+    margin-left: 70%;
+  }
+}
+
+@media (max-width: 1440px) {
+   .forget {
+    margin-left: 60%;
+  }
+
+  .baseboard {
+    margin-left: 5%;
+  }
+}
+
+// Mobile //
+
+@media (max-width: 1024px) {
+   .left {
+    display: none;
+   }
+
+  .form {
+    background: none;
+  }
+
+  .forget {
+    margin-left: 70%;
+  }
+
+  .baseboard {
+   text-align: justify;
+   margin-left: 37%;
+   width: 50%;
+  }
+  
+}
+
+@media (max-width: 768px) {
+
+  .forget {
+    margin-left: 60%;
+  }
+
+  .baseboard {
+    margin-left: 32%;
+  }
+}
+
+@media (max-width: 693px){
+  .form{
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 584px){
+  .form{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .form{
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .forget {
+    margin-left: 30%;
+}
+
+   .label {
+    padding: 0;
+   }
+
+   .label .a {
+    width: 100%;
+   }
+   
+
+   .textmain {
+    width: 100%;
+    font-size: 30px;
+   }
+
+   .baseboard {
+    width: 100%;
+    text-align: none;
+    margin-left: 20%;
+   }
+
+}
+
+@media (max-width: 375px) {
+  .baseboard {
+    margin: 0 auto;
+  }
+
+  .networks {
+    width: 20%;
+    margin-left: 10%;
+  }
+
+  .forget {
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 375px) {
+  .form {
+    width: 100%;
+  }
+
+  .baseboard {
+    text-align: center;
+  }
+
+  .forget {
+    margin-left: 10%;
+  }
+
+  .textmain {
+   font-size: 20px;
+  }
 }
