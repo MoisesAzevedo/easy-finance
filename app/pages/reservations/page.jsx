@@ -161,7 +161,6 @@ export default function Reservationpage() {
 
           <div className={styles.submit}>
         <ButtonCustom
-          /*   type="submit" */
           value="Salvar Alterações"
         />
       </div>
