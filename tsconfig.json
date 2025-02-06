@@ -19,6 +19,7 @@
     "incremental": true,
     "plugins": [{ "name": "next" }]
   },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Login/page.jsx"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -28,5 +29,6 @@
     "pages/InflowsPage.jsx",
     "app/pages/login/layout.jsx"
   ],
+
   "exclude": ["node_modules"]
 }
