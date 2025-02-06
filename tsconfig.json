@@ -19,7 +19,6 @@
     "incremental": true,
     "plugins": [{ "name": "next" }]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Login/page.jsx"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -28,7 +27,7 @@
     "components/ui/ButtonCustom.jsx",
     "pages/InflowsPage.jsx",
     "app/pages/login/layout.jsx"
-  ],
+, "app/pages/reservations/page.jsx"  ],
 
   "exclude": ["node_modules"]
 }

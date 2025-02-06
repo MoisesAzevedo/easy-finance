@@ -2,13 +2,14 @@ import React from "react";
 import styles from "./layout.module.scss";
 import { Button } from "@/components/ui/button";
 
+
 const NavMenu = () => {
   const projects = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"];
 
   return (
     <nav className={styles.nav_container}>
       <div className={styles.nav_menu}>
-        <Button variant="outline" className={styles.button}>
+        <Button variant="outline" className={styles.button} >
           <img src="/icons/Entradas.png" />
           <p>Entradas</p>
         </Button>
@@ -50,7 +51,7 @@ const NavMenu = () => {
             <img src="icons/github.png" alt="" />
             <img src="icons/gmail.png" alt="" />
           </div>
-          <p>Criado por Moisés Azevedo</p>
+          <p>Criado por Moisés Azevedo & Guilherme </p>
         </div>
         <div className={styles.new_project}>
           <img src="icons/new-project.png" />
