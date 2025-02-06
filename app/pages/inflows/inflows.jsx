@@ -16,10 +16,10 @@ const Inflows = () => {
 
   //database
   const [inflows_arr, setInflows_arr] = useState([
-    { title: "Salário", value: 50.0, date: "20/10/2024", type: "Pessoal" },
-    { title: "Freela", value: 100.0, date: "15/10/2024", type: "Lazer" }
+    { title: "Salário", value: 50.0, date: "20/10/2024", type: "Pagamento" },
+    { title: "Freela", value: 100.0, date: "15/10/2024", type: "Avulso" }
   ]);
-  const types = ["Pessoal", "Lazer"];
+  const types = ["Pagamento", "Avulso"];
 
   const updated = "20/09/2024";
   ///////////////////////////////////////
@@ -100,7 +100,7 @@ const Inflows = () => {
 
         <div className={styles.total}>
           <p>Pagamentos: R$ 10.000,00</p>
-          <p>Saldo: R$ 10.300,00</p>
+          <p>Conta: R$ 10.300,00</p>
         </div>
       </header>
 
