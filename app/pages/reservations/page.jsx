@@ -20,8 +20,8 @@ export default function Reservationpage() {
   
   
   const [reservation_arr, setReservation_arr] = useState([
-      { reserve: "Dizimo", percentage: 0.10 * 100, value: "R$10000,00",
-       balance: 9000.0 },
+      { reserve: "Dizimo", percentage: 0.10 * 100, value: "R$100000",
+       balance: 9000 },
       { reserve: "Faculdade", percentage: 10, value: "R$10000,00",
        balance: "R$ 7.0000,00" },
       { reserve: "Moradia", percentage: 10, value: "R$10000,00",
@@ -159,7 +159,7 @@ export default function Reservationpage() {
           </table>
           </form>
 
-          <div className={styles.submit}>
+        <div className={styles.submit}>
         <ButtonCustom
           value="Salvar Alterações"
         />
@@ -167,5 +167,6 @@ export default function Reservationpage() {
 
       </section>
     </body>
-    </html>)
+    </html>
+    )
 }

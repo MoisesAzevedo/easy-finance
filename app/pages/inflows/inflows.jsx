@@ -215,7 +215,6 @@ const Inflows = () => {
 
       <div className={styles.submit}>
         <ButtonCustom
-          /*   type="submit" */
           value="Salvar Alterações"
         />
       </div>
