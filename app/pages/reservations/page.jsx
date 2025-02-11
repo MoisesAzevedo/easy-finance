@@ -1,6 +1,6 @@
 "use client";
 import ButtonCustom from "@/components/ui/ButtonCustom";
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import styles from "./reservations.module.scss"
 
 
@@ -20,21 +20,21 @@ export default function Reservationpage() {
   
   
   const [reservation_arr, setReservation_arr] = useState([
-      { reserve: "Dizimo", percentage: 0.10 * 100, value: "R$100000",
+      { reserve: "Dizimo", percentage: "10%", value: "R$100000",
        balance: 9000 },
-      { reserve: "Faculdade", percentage: 10, value: "R$10000,00",
+      { reserve: "Faculdade", percentage: "10%", value: "R$10000,00",
        balance: "R$ 7.0000,00" },
-      { reserve: "Moradia", percentage: 10, value: "R$10000,00",
+      { reserve: "Moradia", percentage: "10%", value: "R$10000,00",
         balance: "R$ 6.0000,00" },
-      { reserve: "Lazer", percentage: 10, value: "R$10000,00",
+      { reserve: "Lazer", percentage: "10%", value: "R$10000,00",
         balance: "R$ 5.0000,00" },
-       { reserve: "Pessoal", percentage: 10, value: "R$10000,00",
+       { reserve: "Pessoal", percentage: "10%", value: "R$10000,00",
         balance: "R$ 4.0000,00" },
-      { reserve: "Investimento", percentage: 30, value: "R$3000,00",
+      { reserve: "Investimento", percentage: "30%", value: "R$3000,00",
         balance: "R$ 1.0000,00" },
-      { reserve: "CNH", percentage: 9, value: "R$900",
+      { reserve: "CNH", percentage: "9%", value: "R$900",
         balance: "R$100,00" },
-     { reserve: "Emergencia", percentage: 1, value: "R$100,00",
+     { reserve: "Emergencia", percentage: "1%", value: "R$100,00",
        balance: "R$ 0,00" },
     ]);
 
@@ -118,7 +118,7 @@ export default function Reservationpage() {
                   </td>
                   <td>
                     <input
-                      type="number"
+                      type="text"
                       value={item.percentage}
                       onChange={(e) => handleChange(index, e)}
                     />
