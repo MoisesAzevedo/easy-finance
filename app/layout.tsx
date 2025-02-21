@@ -50,7 +50,6 @@ import styles from "./styles/layout.module.css";
 import { Inter } from "next/font/google";
 import NavMenu from "./pages/layout/NavMenu";
 import LoginPage from "./pages/login/page";
-import Reservationpage from "./pages/reservations/page"
 
 const mainFontFamily = Inter({
   weight: ["400", "600", "900"],
@@ -73,12 +72,6 @@ export default function Layout({ children }: Props) {
   if(pathname === "/login") {
     return (
     <LoginPage />
-    )
-  }
-
-  if(pathname === "/reservations") {
-    return (
-    <Reservationpage />
     )
   }
 

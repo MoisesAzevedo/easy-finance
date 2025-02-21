@@ -1,83 +1,80 @@
 "use client";
 import ButtonCustom from "@/components/ui/ButtonCustom";
-import React, {  useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./reservations.module.scss"
 
 
 
 export default function Reservationpage() {
-  
-  
 
-  const inputReserveRef = useRef(null);
-  const inputPercentageRef = useRef(null);
-  const inputValueRef = useRef(null);
-  const inputBalanceRef = useRef(null);
+  //add interface
+  interface Reservation {
+    reserve: string;
+    percentage: number;
+    value: string;
+    balance: string;
+  }
 
-  
-  const [flagClearInput, setFlagClearInput] = useState(false);
 
-  
-  
-  const [reservation_arr, setReservation_arr] = useState([
-      { reserve: "Dizimo", percentage: "10%", value: "R$100000",
-       balance: 9000 },
-      { reserve: "Faculdade", percentage: "10%", value: "R$10000,00",
-       balance: "R$ 7.0000,00" },
-      { reserve: "Moradia", percentage: "10%", value: "R$10000,00",
-        balance: "R$ 6.0000,00" },
-      { reserve: "Lazer", percentage: "10%", value: "R$10000,00",
-        balance: "R$ 5.0000,00" },
-       { reserve: "Pessoal", percentage: "10%", value: "R$10000,00",
-        balance: "R$ 4.0000,00" },
-      { reserve: "Investimento", percentage: "30%", value: "R$3000,00",
-        balance: "R$ 1.0000,00" },
-      { reserve: "CNH", percentage: "9%", value: "R$900",
-        balance: "R$100,00" },
-     { reserve: "Emergencia", percentage: "1%", value: "R$100,00",
-       balance: "R$ 0,00" },
-    ]);
+  const [reservation_arr, setReservation_arr] = useState<Reservation[]>([
+    { reserve: "Dizimo", percentage: 0.10 * 100, value: "R$10000,00",
+   balance: "R$ 9000.000"},
+    { reserve: "Faculdade", percentage: 10, value: "R$10000,00",
+    balance: "R$ 7.0000,00" },
+    { reserve: "Moradia", percentage: 10, value: "R$10000,00",
+    balance: "R$ 6.0000,00" },
+    { reserve: "Lazer", percentage: 10, value: "R$10000,00",
+     balance: "R$ 5.0000,00" },
+    { reserve: "Pessoal", percentage: 10, value: "R$10000,00",
+     balance: "R$ 4.0000,00" },
+    { reserve: "Investimento", percentage: 30, value: "R$3000,00",
+     balance: "R$ 1.0000,00" },
+    { reserve: "CNH", percentage: 9, value: "R$900",
+     balance: "R$100,00" },
+    { reserve: "Emergencia", percentage: 1, value: "R$100,00",
+    balance: "R$ 0,00" }, 
+  ]);
 
+    const [flagClearInput, setFlagClearInput] = useState(false);
   
+    const inputReserveRef = useRef<HTMLInputElement>(null);
+    const inputPercentageRef = useRef<HTMLInputElement>(null);
+    const inputValueRef = useRef<HTMLInputElement>(null);
+    const inputBalanceRef = useRef<HTMLInputElement>(null);
   
-
-    const handleChange = (index, event) => {
+    const handleChange = (index: number, event: React.ChangeEvent<HTMLInputElement>) => {
       const newReservation_arr = [...reservation_arr];
-      newReservation_arr[index] = event.target.value;
+      newReservation_arr[index] = {...newReservation_arr[index], reserve: event.target.value}
       setReservation_arr(newReservation_arr);
     };
-
-  
-
-    const newObject = (event) => {
-        if (
-          inputReserveRef.current.value &&
-          inputPercentageRef.current.value &&
-          inputValueRef.current.value &&
-          inputBalanceRef.current.value != ""
-        ) {
-          setFlagClearInput(true);
-    
-          setReservation_arr((prevState) => [
-            ...prevState,
-            {
-              reserve: inputReserveRef.current.value,
-              percentage: inputPercentageRef.current.value,
-              value: inputValueRef.current.value,
-              balance: inputBalanceRef.current.value
-            }
-          ]);
-        } else {
-          console.log("nao executado o input ref");
-        }
-      };
  
+    const newObject = () => {
+      if (
+        inputReserveRef.current?.value &&
+        inputPercentageRef.current?.value &&
+        inputValueRef.current?.value &&
+        inputBalanceRef.current?.value
+      ) {
+        setFlagClearInput(true);
+  
+        setReservation_arr((prevState: Reservation[]) => [
+          ...prevState,
+          {
+          reserve: "null",  
+          percentage: 50, 
+          value: "null" ,
+          balance: "null", 
+          },
+        ]);
+      } 
+      else {
+      console.log("nao executado o input ref");
+      }
+    };
     
 
-
+  // Removing the body/html to fix the bug of being on top
   return (
-  <html lang="en">
-    <body>
       <section className={styles.section}>
       <header>
         <div>
@@ -118,7 +115,7 @@ export default function Reservationpage() {
                   </td>
                   <td>
                     <input
-                      type="text"
+                      type="number"
                       value={item.percentage}
                       onChange={(e) => handleChange(index, e)}
                     />
@@ -159,14 +156,13 @@ export default function Reservationpage() {
           </table>
           </form>
 
-        <div className={styles.submit}>
+          <div className={styles.submit}>
         <ButtonCustom
+          /*   type="submit" */
           value="Salvar Alterações"
         />
       </div>
 
       </section>
-    </body>
-    </html>
-    )
+      )
 }

@@ -26,8 +26,9 @@
     ".next/types/**/*.ts",
     "components/ui/ButtonCustom.jsx",
     "pages/InflowsPage.jsx",
-    "app/pages/login/layout.jsx"
-, "app/pages/reservations/page.jsx"  ],
+    "app/pages/login/layout.jsx",
+    "app/pages/reservations/reservation.tsx"
+  ],
 
   "exclude": ["node_modules"]
 }
