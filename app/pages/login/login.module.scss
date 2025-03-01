@@ -1,3 +1,5 @@
+// scss made from scratch
+
 .container {
   display: flex;
   flex-direction: row;
@@ -24,10 +26,11 @@
 
 .wallpaper {
   width: 1170px;
-  border: #1E2D34 4px solid;
   border-radius: 12px;
+  border: #1E2D34 4px solid;
   margin: 0px 62px 36px 63px ;
 }
+
 
 .form {
   width: 595px;
@@ -44,12 +47,11 @@
   font-size: 40px;
   text-align: center;
   padding-bottom: 50px;
-  margin-top: 132px;
+  margin-top: 135px;
 }
 
 .label {
   display: flex;
-  justify-content: space-around;
   color: #1F4D18 ;
   font-weight: 500;
   font-size: 20px;
@@ -68,9 +70,9 @@
 
 .forget {
   color: #1F4D18;
-   font-size: 16px;
+  font-size: 16px;
   font-weight: 500;
-  margin-left: 308px;
+  margin-left: 314px;
   cursor: pointer;
 }
 
@@ -79,6 +81,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 33px;
   margin-top: 600px;
   cursor: pointer;
 }
@@ -233,10 +236,13 @@
   .right {
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
   }
 
   .form {
+    width: 1024px;
+    align-items: center;
+    justify-items: center;
     background: none;
     padding: 0px 40px 20px 41px;
     margin-top: 226px;
@@ -246,18 +252,24 @@
     width: 400px;
   }
 
-  .label {
-    display: flex;
-    justify-content: space-between;
+  .label {  
+    text-align: left;
+    display: block;
+    width: 42%;
   }
+
 
   .textmain {
     font-size: 20px;
     padding-bottom: 24px;
+    display: flex;
     text-align: center;
+    justify-content: center;
   }
 
   .btnlogin {
+    display: flex;
+    flex-direction: column;
     width: 400px;
     font-size: 16px;
   }
@@ -268,7 +280,8 @@
   }
   
   .forget {
-    margin-left: 135px;
+   text-align: right;
+    margin-left: 205px;
   }
 }
 
@@ -317,6 +330,12 @@
     width: 300px;
   }
 
+  .label {
+    width: 32%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .btnlogin {
     width: 300px;
     font-size: 16px;
@@ -331,9 +350,6 @@
     margin-left: 0px;
   }
 
-  .label {
-    display: flex;
-    justify-content: center;
-  }
+
   
 }
