@@ -11,28 +11,28 @@ export default function Reservationpage() {
   interface Reservation {
     reserve: string;
     percentage: string;
-    value: string;
-    balance: string;
+    value: number;
+    balance: number;
   }
 
 
   const [reservation_arr, setReservation_arr] = useState<Reservation[]>([
-    { reserve: "Dizimo", percentage: "10%", value: "R$10000,00",
-   balance: "R$ 9000.000"},
-    { reserve: "Faculdade", percentage: "10%", value: "R$10000,00",
-    balance: "R$ 7.0000,00" },
-    { reserve: "Moradia", percentage: "10%", value: "R$10000,00",
-    balance: "R$ 6.0000,00" },
-    { reserve: "Lazer", percentage: "10%", value: "R$10000,00",
-     balance: "R$ 5.0000,00" },
-    { reserve: "Pessoal", percentage: "10%", value: "R$10000,00",
-     balance: "R$ 4.0000,00" },
-    { reserve: "Investimento", percentage: "30%", value: "R$3000,00",
-     balance: "R$ 1.0000,00" },
-    { reserve: "CNH", percentage: "9%", value: "R$900",
-     balance: "R$100,00" },
-    { reserve: "Emergencia", percentage: "1%", value: "R$100,00",
-    balance: "R$ 0,00" }, 
+    { reserve: "Dizimo", percentage: "10%", value: 1000.00,
+   balance: 9000.00},
+    { reserve: "Faculdade", percentage: "10%", value: 1000.00,
+    balance:  7000.00 },
+    { reserve: "Moradia", percentage: "10%", value: 1000.00,
+    balance:  6000.00 },
+    { reserve: "Lazer", percentage: "10%", value: 1000.00,
+     balance:  5000.00 },
+    { reserve: "Pessoal", percentage: "10%", value: 1000.00,
+     balance: 4000.00 },
+    { reserve: "Investimento", percentage: "30%", value: 3000.00,
+     balance: 1000.00 },
+    { reserve: "CNH", percentage: "9%", value: 900,
+     balance: 100},
+    { reserve: "Emergencia", percentage: "1%", value: 100,
+    balance: 0 }, 
   ]);
 
     const [flagClearInput, setFlagClearInput] = useState(false);
@@ -62,8 +62,8 @@ export default function Reservationpage() {
           {
           reserve: "null",  
           percentage: "null", 
-          value: "null" ,
-          balance: "null", 
+          value: 0 ,
+          balance: 0, 
           },
         ]);
       } 
@@ -82,8 +82,8 @@ export default function Reservationpage() {
         </div>
 
         <div className={styles.total}>
-          <p>Pagamentos: R$ 10.000,00</p>
-          <p>Saldo: R$ 10.300,00</p>
+          <p>Pagamentos:  10.000,00</p>
+          <p>Saldo:  10.300,00</p>
         </div>
         
         </header>
