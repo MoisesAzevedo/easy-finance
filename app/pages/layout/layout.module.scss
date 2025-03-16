@@ -72,12 +72,12 @@
 
       &:hover {
         border-radius: 3px;
-        background-color: #b6e8c8;
-        color: #38862d;
+        background-color: rgba(71, 116, 85, 1);
+        color: rgba(255, 255, 255, 1);
       }
 
       &:focus {
-        background-color: #a7d6b8;
+        background-color: rgba(71, 116, 85, 1);
         border: none;
       }
 

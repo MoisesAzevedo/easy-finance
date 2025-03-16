@@ -37,6 +37,7 @@ export default function Reservationpage() {
 
     const [flagClearInput, setFlagClearInput] = useState(false);
   
+  
     const inputReserveRef = useRef<HTMLInputElement>(null);
     const inputPercentageRef = useRef<HTMLInputElement>(null);
     const inputValueRef = useRef<HTMLInputElement>(null);
@@ -71,7 +72,22 @@ export default function Reservationpage() {
       console.log("nao executado o input ref");
       }
     };
-    
+
+
+    // mask for number
+    const maskCoin = (value: string | number) => {
+      if(!value) return "";
+
+      const numericValue = String(value).replace(/\D/g, "");
+      const valuefloat = parseFloat(numericValue) / 100;
+      if(isNaN(valuefloat)) return "";
+
+      return new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      }).format(valuefloat)
+    }
+
 
   // Removing the body/html to fix the bug of being on top
   return (
@@ -122,8 +138,8 @@ export default function Reservationpage() {
                   </td>
                   <td>
                     <input
-                      type="number"
-                      value={item.value}
+                      type="text"
+                      value={maskCoin(item.value)}
                       onChange={(e) => handleChange(index, e)}
                     />
                   </td>
