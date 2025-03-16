@@ -17,22 +17,22 @@ export default function Reservationpage() {
 
 
   const [reservation_arr, setReservation_arr] = useState<Reservation[]>([
-    { reserve: "Dizimo", percentage: "10%", value: 1000.00,
-   balance: 9000.00},
-    { reserve: "Faculdade", percentage: "10%", value: 1000.00,
-    balance:  7000.00 },
-    { reserve: "Moradia", percentage: "10%", value: 1000.00,
-    balance:  6000.00 },
-    { reserve: "Lazer", percentage: "10%", value: 1000.00,
-     balance:  5000.00 },
-    { reserve: "Pessoal", percentage: "10%", value: 1000.00,
-     balance: 4000.00 },
-    { reserve: "Investimento", percentage: "30%", value: 3000.00,
-     balance: 1000.00 },
-    { reserve: "CNH", percentage: "9%", value: 900,
-     balance: 100},
-    { reserve: "Emergencia", percentage: "1%", value: 100,
-    balance: 0 }, 
+    { reserve: "Dizimo", percentage: "10%", value: 100000,
+   balance: 900000},
+    { reserve: "Faculdade", percentage: "10%", value: 100000,
+    balance:  700000 },
+    { reserve: "Moradia", percentage: "10%", value: 100000,
+    balance:  600000 },
+    { reserve: "Lazer", percentage: "10%", value: 100000,
+     balance:  500000 },
+    { reserve: "Pessoal", percentage: "10%", value: 100000,
+     balance: 400000 },
+    { reserve: "Investimento", percentage: "30%", value: 300000,
+     balance: 100000 },
+    { reserve: "CNH", percentage: "9%", value: 90000,
+     balance: 10000},
+    { reserve: "Emergencia", percentage: "1%", value: 10000,
+    balance: 0.00 }, 
   ]);
 
     const [flagClearInput, setFlagClearInput] = useState(false);
@@ -145,8 +145,8 @@ export default function Reservationpage() {
                   </td>
                   <td>
                     <input
-                      type="number"
-                      value={item.balance}
+                      type="text"
+                      value={maskCoin(item.balance)}
                       onChange={(e) => handleChange(index, e)}
                     />
                   </td>                     
